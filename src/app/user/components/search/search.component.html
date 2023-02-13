@@ -1,0 +1,121 @@
+<div class="container">
+    <div class="row">
+      <!-- <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Ngo">
+      </div> -->
+      <!-- <table class="table table-striped" >
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>state</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let hero of heroes | filter:searchText">
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.state}}</td>
+        </tr>
+        </tbody>
+      </table> -->
+      <!-- <div *ngFor="let Detail of Details | filter:searchText">
+        <h2>{{Detail.ngo_name}}</h2>
+        <div>
+            <span > District :</span><span style="padding-left: 10px;">{{Detail.district}}</span>
+            <br>
+            <span >City :</span><span style="padding-left: 10px;">{{Detail.city}}</span>
+            <br>
+            <span >Location :</span><span style="padding-left: 10px;">{{Detail.location}}</span>
+            <br>
+            <span >contact-No:</span><span style="padding-left: 10px;">{{Detail.contact}}</span>
+        </div>
+        <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+            <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button> 
+            <button class="btn btn-sm btn-success" (click)="navigate(Detail)" routerLinkActive="current">show more Details</button>  
+        </div>
+        <span>-------------------------------------------------------------------------------------</span>
+    </div> -->
+    <nav ngbNav #nav="ngbNav" class="nav-tabs">
+      <ng-container ngbNavItem>
+        <a ngbNavLink style="padding-right:50px;font-weight: 1000;color:rgba(0,0,0,.5)">Ngo</a>
+        <ng-template ngbNavContent>
+          <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Ngo">
+          </div>
+          <div *ngFor="let Detail of Details | filter:searchText">
+            <h2>{{Detail.ngo_name}}</h2>
+            <div>
+                <span > District :</span><span style="padding-left: 10px;">{{Detail.district}}</span>
+                <br>
+                <span >City :</span><span style="padding-left: 10px;">{{Detail.city}}</span>
+                <br>
+                <span >Location :</span><span style="padding-left: 10px;">{{Detail.location}}</span>
+                <br>
+                <span >contact-No:</span><span style="padding-left: 10px;">{{Detail.contact}}</span>
+            </div>
+            <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+                <!-- <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button>  -->
+                <!-- {{Detail.id}} -->
+                <button class="btn btn-sm btn-success" (click)="navigate(Detail)" routerLinkActive="current">show more Details</button>  
+            </div>
+            <span>-------------------------------------------------------------------------------------</span>
+        </div>
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink style="padding-right:50px; font-weight: 1000;color:rgba(0,0,0,.5)">Fundraiser</a>
+        <ng-template ngbNavContent>
+          <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Fundraiser">
+          </div>
+          <div *ngFor="let Fundraiser of Fundraiser | filter:searchText">
+            <h2>{{Fundraiser.fundraiser_name}}</h2>
+            <div>
+                <span > District :</span><span style="padding-left: 10px;">{{Fundraiser.district}}</span>
+                <br>
+                <span >City :</span><span style="padding-left: 10px;">{{Fundraiser.city}}</span>
+                <br>
+                <span >Location :</span><span style="padding-left: 10px;">{{Fundraiser.location}}</span>
+                <br>
+                <span >contact-No:</span><span style="padding-left: 10px;">{{Fundraiser.contact}}</span>
+            </div>
+            <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+                <!-- <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button>  -->
+                <!-- {{Detail.id}} -->
+                <button class="btn btn-sm btn-success" (click)="navigates(Fundraiser)" routerLinkActive="current">show more Details</button>  
+            </div>
+            <span>-------------------------------------------------------------------------------------</span>
+        </div>
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink  style="padding-right:50px;font-weight: 1000;color:rgba(0,0,0,.5)">Drives</a>
+        <ng-template ngbNavContent>
+          <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Drives">
+          </div>
+          <div *ngFor="let Drives of Drives | filter:searchText">
+            <h2>{{Drives.drive_name}}</h2>
+            <div>
+                <span > District :</span><span style="padding-left: 10px;">{{Drives.district}}</span>
+                <br>
+                <span >City :</span><span style="padding-left: 10px;">{{Drives.city}}</span>
+                <br>
+                <span >Location :</span><span style="padding-left: 10px;">{{Drives.location}}</span>
+                <br>
+                <span >Ngo:</span><span style="padding-left: 10px;">{{Drives.ngo}}</span>
+            </div>
+            <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+                <!-- <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button>  -->
+                <!-- {{Detail.id}} -->
+                <button class="btn btn-sm btn-success" (click)="navigatess(Drives)" routerLinkActive="current">show more Details</button>  
+            </div>
+            <span>-------------------------------------------------------------------------------------</span>
+        </div>
+        </ng-template>
+      </ng-container>
+    </nav>
+    
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </div>

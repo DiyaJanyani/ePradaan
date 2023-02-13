@@ -1,0 +1,23 @@
+<p></p>
+<br>
+<div class="about-us container-fluid">
+    <div class="container">
+    
+        <div class="row natur-row no-margin w-100" style="background-color: rgb(186, 223, 211);">
+            <div class="text-part col-md-6" *ngFor="let donors of donorData">
+                <h2>{{donors.DonorName}} </h2>
+                <p>Email:{{donors.Email}}</p>
+                <button  type="button" class="btn btn-warning    btn-sm">Accept</button>
+                <button  type="button" class="btn btn-danger btn-sm mx-5">Deny</button>
+            </div>
+            <div class="image-part col-md-6">
+                <div class="about-quick-box row">
+                    <img src="assets/images/users/user3.jpg" alt="">
+                     
+                     
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>     

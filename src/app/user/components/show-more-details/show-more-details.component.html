@@ -1,0 +1,345 @@
+<!-- <div *ngIf="detail">
+    <div>{{detail.id}}</div>
+    <div>{{detail.location}}</div>
+    <div>{{detail.city}}</div>
+</div> -->
+<!-- <a href="javascript:void(0)" id="top"(click)="goBack()">
+    <-Back
+  </a> -->
+  <!-- <div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <a href="javascript:void(0)" id="top"(click)="goBack()">
+                    X
+                  </a>
+                <div class="details col-md-6" *ngIf="detail">
+                    <h3 class="product-title">{{detail.ngo_name}}</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">41 reviews</span>
+                    </div>
+                    <div>
+                        <span><h3>District:</h3><span>{{detail.district}}</span></span>
+                        <span><h3>city:</h3><span>{{detail.city}}</span></span>
+                        <span><h3>Location:</h3><span>{{detail.location}}</span></span>
+                        <span><h3>contact-No:</h3><span>{{detail.contact}}</span></span>
+                    </div>
+                    <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+                    <h4 class="price">Notification: <span>Important update</span></h4>
+                    <div class="action">
+                        <google-pay-button
+                         environment="TEST"
+                         buttonType="buy"
+                         buttonColor="black"
+                         [paymentRequest]="paymentRequest"
+                         (loadpaymentdata)="onLoadPaymentData($event)"
+                         (error)="onError($event)"
+                         [paymentAuthorizedCallback]="onPaymentDataAuthorized">
+                        </google-pay-button>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="about-us container-fluid">
+    <div class="container">
+
+        <div class="row natur-row  w-100">
+            <div class="text-part col-md-6">
+
+                <h2>{{detail.ngo_name}}</h2>
+                <p>ISKCON Juhu has a novel way of bringing the blessings of Lord Krishna in the form of food.
+                    <br>
+                    Anna Daan is Maha Daan. Lord Krishna is extremely pleased to bless a devotee who renders even a
+                    little service to Him.
+                    <br>
+                    In Mahabharata, Yudhishthira Maharaj enquired:"What gift will reward in this world and in the next?"
+                    Bhismadev answered:"There has never been, nor will there ever be, any gift equal to the gift of
+                    food.”-Anusasana Parva 13.63.3-6
+                    <br>
+                    Please grab the opportunity to get the blessings of Lord Krishna by rendering this important service
+                    of Anna Daan Seva.
+                </p>
+            </div>
+            
+            <div class="image-part col-md-5">
+                <div class="about-quick-box row ">
+                    <img src="assets/images/showDetails/Anna_daan_Head.jpg" alt="">
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div class="container-fliud">
+                        <div class="wrapper row">
+                            <a href="javascript:void(0)" id="top"(click)="goBack()">
+                                X
+                              </a>
+                            <div class="details col-md-6" *ngIf="detail">
+                                <h3 class="product-title">{{detail.ngo_name}}</h3>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <span class="review-no">41 reviews</span>
+                                </div>
+                                <div>
+                                    <span><h3>District:</h3><span>{{detail.district}}</span></span>
+                                    <span><h3>city:</h3><span>{{detail.city}}</span></span>
+                                    <span><h3>Location:</h3><span>{{detail.location}}</span></span>
+                                    <span><h3>contact-No:</h3><span>{{detail.contact}}</span></span>
+                                </div>
+                                <h3>Ongoing Drive:Food Drive</h3>
+                                <p class="product-description">We are having a food drive i.e food is going to be donated in under-priveleged school. You can donate money or you can join the drive</p>
+                                <!-- <h4 class="price">Notification: <span>Important update</span></h4> -->
+                                <div class="row">
+                                <div class="action col-6">
+                                    <google-pay-button
+                                     environment="TEST"
+                                     buttonType="donate"
+                                     buttonColor="black"
+                                     [paymentRequest]="paymentRequest"
+                                     (loadpaymentdata)="onLoadPaymentData($event)"
+                                     (error)="onError($event)"
+                                     [paymentAuthorizedCallback]="onPaymentDataAuthorized">
+                                    </google-pay-button>
+                                    
+                                    
+                                </div>
+                                <div class="col-6">
+                                    <button style="padding: 10px; border-radius: 30px;color: white;background-color: black;" routerLink="/donor-form" routerLinkActive="current">Join a drive</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ################# Charity Number Starts Here#######################--->
+<!-- <div class="col-lg-12 col-md-12 col-xs-12 m-t detail-box text-center " style="margin-top: 100px; background-color: grey;padding: 30px;margin: 30px;border-radius: 20px;">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-12 box-mg">
+            <div class="box-bor1">
+                <h2 id="box-bor-text1" >300 crore</h2>
+                <h4 id="box-bor-text2" >meals served around the world for</h4>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 box-mg">
+            <div class="box-bor2" >
+                <h2 id="box-bor-text1">76 crore</h2>
+                <h4 id="box-bor-text2">meals served since COVID-19 lockdown</h4>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 box-mg">
+            <div class="box-bor3" >
+                <h2 id="box-bor-text1">56 years</h2>
+                <h4 id="box-bor-text2">of service to humanity to the nation</h4>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- ################# Events Start Here#######################--->
+<section class="events">
+    <div class="container">
+        <div class="session-title row">
+            <h2>Few photograph of the beneficiaries</h2>
+            
+        </div>
+        <div class="event-ro row">
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna1.jpg" alt="">
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna2.jpg" alt="">
+                   
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna3.jpg" alt="">
+                    
+                   
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna4.jpg" alt="">
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna5.jpg" alt="">
+                    
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna6.jpg" alt="">
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna7.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna8.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="event-box">
+                    <img src="assets/images/showDetails/Anna9.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        <h4 class="section-title text-center" >Voice from the ground</h4>
+        <div class="m-t-md20">
+            <div id="main-row" class=" row c3 media" >
+                <div class="colum1 col-xs-12 col-sm-6 col-md-5" >
+                    <blockquote class="quote"><i class="fa fa-quote-left"></i>ISKCON members have helped us a lot. They
+                        have their own kitchens and they are also partnering with the government.</blockquote>
+                    <h5 class="text-right blockquoteText">Arvind Kejriwal<br><span id="subscript" >Chief
+                            Minister of Delhi</span></h5>
+                </div>
+                <div class="column2 col-xs-12 col-sm-6 col-md-5">
+                    <blockquote class="quote"><i class="fa fa-quote-left"></i>We were starving but ISKCON people are
+                        giving us daily meals and if we continue to get some food like this, then we do not have to go
+                        back to our villages.</blockquote>
+                    <h5 class="text-right blockquoteText">Kusheshwar Singh<br><span id="subscript" >A
+                            migrant worker from Bihar in New Delhi</span></h5>
+                </div>
+                <div class="column3 col-xs-12 col-sm-6 col-md-5" >
+                    <blockquote class="quote"><i class="fa fa-quote-left"></i>I would like to thank ISKCON for heeding
+                        the call of Chief Minister of Maharashtra to help those who are impacted by the lockdown&amp;
+                        providing them a meal a day. Immense gratitude for helping in this hour of need.</blockquote>
+                    <h5 class="text-right blockquoteText">Priyanka Chaturvedi<br><span id="subscript"
+                            >Politician</span></h5>
+                </div>
+                <div class="column4 col-xs-12 col-sm-6 col-md-5" >
+                    <blockquote class="quote"><i class="fa fa-quote-left"></i>Nothing can be more gratifying than being
+                        able to provide food to someone. By partnering with ISKCON in feeding thousands of labourers
+                        amidst COVID-19 pandemic, Team Adani Foundation has lived by its core Gandhian philosophy of
+                        Trusteeship.</blockquote>
+                    <h5 class="text-right blockquoteText">Gautam Adani<br><span id="subscript">Adani
+                            Group</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h2>About Us</h2>
+                <p>
+                    e-Pradaan is a leading provider of information technology, consulting, and business process
+                    services. Our dedicated employees offer strategic insights, technological expertise and industry
+                    experience.
+                </p>
+                <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market,
+                    Backed by our strong quality processes and rich experience managing global... </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h2>Useful Links</h2>
+                <ul class="list-unstyled link-list">
+                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 map-img">
+                <h2>Contact Us</h2>
+                <address class="md-margin-bottom-40">
+                    BlueDart <br>
+                    Thane () District) <br>
+                    Maharashtra, IND <br>
+                    Phone: +91 998776655 <br>
+                    Email: <a href="mailto:info@anybiz.com" class="">e-Pradaan@gmail.com</a><br>
+                    Web: <a href="smart-eye.html" class="">www.e-Pradaan.in</a>
+                </address>
+
+            </div>
+        </div>
+
+
+        <div class="nav-box row clearfix">
+            <div class="inner col-md-9 clearfix">
+                <ul class="footer-nav clearfix">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Servies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+
+            </div>
+            <div class="donate-link col-md-3"><a href="donate.html" class="btn btn-primary "><span
+                        class="btn-title">Join Now</span></a></div>
+        </div>
+
+    </div>
+
+
+</footer> -->
+<div class="copy">
+    <div class="container">
+        <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved By Our Team</a>
+
+        <span>
+            <a><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            <a><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+            <a><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+            <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        </span>
+    </div>
+
+</div>

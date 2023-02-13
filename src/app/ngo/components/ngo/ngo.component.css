@@ -1,0 +1,38 @@
+.body{
+    background-color: #F5F5F5;
+}
+.row{
+    margin-left: 20px;
+}
+
+.panel{
+    border: 1px solid white;
+
+}
+
+.panel-body-profile{
+    border: 1px solid black; 
+    border-radius: 7px;
+    background-color: #080a0e;
+}
+
+.profile-image{
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img{
+    border: 3px solid white;
+    border-radius: 7px;
+
+}
+
+.profile-data-name{
+    color:white;
+    margin-left: 100px;
+}
+.profile-data-title{
+    color: #999;
+    margin-left: 80px;
+}   

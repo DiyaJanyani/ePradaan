@@ -1,0 +1,73 @@
+<p>signup works!</p>
+<div class="container">
+    <form [formGroup]="userform"  (ngSubmit)="submit()">
+        <div *ngIf="steps==1">
+            <div>
+            <h4>User Details</h4>
+            <div class="mb-3 w-50">
+                <label for="exampleInputName" class="form-label">Full name</label>
+                <input type="email" class="form-control" id="exampleInputFullName" aria-describedby="emailHelp" formControlName="Fullname">
+                <span  style="color: red;" *ngIf="Fullname && Fullname.invalid && Fullname.touched"> 
+                    This field is required
+                </span>
+              </div>
+              <div class="mb-3 w-50">
+                <label for="exampleInputUserName" class="form-label">UserName</label>
+                <input type="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp" formControlName="UserName">
+                <span  style="color: red;" *ngIf="UserName && UserName.invalid && UserName.touched">
+                    This field is required
+                </span>
+              </div>
+              <div class="mb-3 w-25">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="Password">
+                <span  style="color: red;" *ngIf="Password && Password.invalid && Password.touched">
+                    This field is required
+                </span>
+              </div>
+            </div>
+        </div>
+         <div>
+            <div *ngIf="steps==2">
+            <h4>Contact Details</h4>
+            <div class="mb-3 w-25">
+                <label for="exampleInputPhoneNo" class="form-label">Phone no</label>
+                <input type="email" class="form-control" id="exampleInputPhoneNo" aria-describedby="emailHelp" formControlName="Phone">
+                <span  style="color: red;" *ngIf="Phone && Phone.invalid && Phone.touched">This field is required</span>
+              </div>
+              <div class="mb-3 w-75">
+                <label for="exampleInputAddress" class="form-label">Address</label>
+                <input type="email" class="form-control" id="exampleInputAddress" aria-describedby="emailHelp" formControlName="Address">
+                <span  style="color: red;" *ngIf="Address && Address.invalid && Address.touched">
+                    This field is required
+                </span>
+              </div>
+              <div class="mb-3 w-25">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Emailaddress">
+                <span  style="color: red;" *ngIf="Emailaddress && Emailaddress.invalid && Emailaddress.touched">This field is required</span>
+              </div>
+              <div class="mb-3 w-25">
+                <label for="exampleInputAge" class="form-label">Age</label>
+                <input type="email" class="form-control" id="exampleInputAge" aria-describedby="emailHelp" formControlName="Age">
+                <span  style="color: red;" *ngIf="Age && Age.invalid && Age.touched">This field is required</span>
+              </div>
+              <div class="input-group mb-3 w-25">
+                <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                <select class="form-select" id="inputGroupSelect01" formControlName="Gender">
+                  <option selected>Choose...</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+                <span  style="color: red;" *ngIf="Gender && Gender.invalid && Gender.touched">This field is required</span>
+              </div>
+          
+         </div>
+        </div>
+        <!-- href hatana pdega warna problem dega -->
+         <a  class="btn btn-warning" *ngIf="steps!=1" (click)="previous()">Previous</a>
+         <button type="submit" class="btn btn-success mx-2" *ngIf="steps!=2" (click)="next()" [disabled]="userform.controls['Fullname'].invalid || userform.controls['UserName'].invalid || userform.controls['Password'].invalid" >Next</button>
+        <button type="submit" class="btn btn-primary mx-2" *ngIf="steps==2" [disabled]="userform.invalid" >Submit</button>
+      </form>
+    </div>
